@@ -49,7 +49,7 @@ class App extends React.Component {
         playlistTracks: []
       })
     }).then(() => {
-      alert('Playlist Saved!')
+      console.log('ok')
     })
   }
 
