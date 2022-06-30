@@ -21,7 +21,7 @@ class Playlist extends React.Component {
 
     handleClick() {
         this.props.onSave();
-        setTimeout(this.clearInput(), 1000);
+        setTimeout(this.clearInput(), 2000);
     }
 
     render() {
