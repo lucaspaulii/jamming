@@ -49,7 +49,7 @@ class App extends React.Component {
         playlistTracks: []
       })
     }).then(() => {
-      console.log('ok')
+      alert('Job Done!')
     })
   }
 
