@@ -75,7 +75,8 @@ class App extends React.Component {
                 playlistTracks={this.state.playlistTracks} 
                 onRemove={this.removeTrack}
                 onNameChange={this.updatePlaylistName}
-                onSave={this.savePlaylist} />
+                onSave={this.savePlaylist}
+                savedPlaylist={this.playlistSaved} />
     </div>
   </div>
 </div>
