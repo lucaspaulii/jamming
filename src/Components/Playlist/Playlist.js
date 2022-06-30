@@ -20,8 +20,8 @@ class Playlist extends React.Component {
     }
 
     handleClick() {
-        this.clearInput();
         this.props.onSave();
+        this.clearInput();
     }
 
     render() {
