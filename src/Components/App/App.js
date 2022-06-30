@@ -20,6 +20,7 @@ class App extends React.Component {
     this.updatePlaylistName = this.updatePlaylistName.bind(this);
     this.savePlaylist = this.savePlaylist.bind(this);
     this.search = this.search.bind(this);
+    this.defaultName = this.defaultName.bind(this);
   }
 
   addTrack(track) {
@@ -37,6 +38,10 @@ class App extends React.Component {
     this.setState({playlistTracks: tracks});
   }
 
+  defaultName() {
+    return "Insert Playlist Name"
+  }
+
   updatePlaylistName(name) {
     this.setState({playlistName: name});
   }
@@ -50,6 +55,9 @@ class App extends React.Component {
       })
     }).then(() => {
       alert('Playlist Saved! Click OK to confirm')
+    }).then(() => {
+      const defaultNam = this.defaultName
+      this.updatePlaylistName(defaultNam)
     })
   }
 
@@ -72,7 +80,8 @@ class App extends React.Component {
                 playlistTracks={this.state.playlistTracks} 
                 onRemove={this.removeTrack}
                 onNameChange={this.updatePlaylistName}
-                onSave={this.savePlaylist} />
+                onSave={this.savePlaylist}
+                byDefault={this.defaultName} />
     </div>
   </div>
 </div>
