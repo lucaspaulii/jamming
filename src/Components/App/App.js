@@ -62,7 +62,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-  <h1 onClick={window.location.reload()} style="cursor:pointer;">Mi<span className="highlight">xT</span>ape</h1>
+  <h1 onClick={window.location.reload()} >Mi<span className="highlight">xT</span>ape</h1>
   <div className="App">
     <SearchBar onSearch={this.search} />
     <div className="App-playlist">
